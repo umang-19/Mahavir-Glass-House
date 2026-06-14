@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Mahavir Glass House</title>
+    <meta name="description" content="Explore our premium automobile glass services including windshield replacement, side door glass replacement, rear glass, repair, and insurance claim support.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        .page-header {
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1605814524867-a7ea7a67f607?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            padding: 8rem 1.5rem 4rem;
+            text-align: center;
+            color: var(--bg-white);
+        }
+        .page-header h1 {
+            color: var(--bg-white);
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .service-detail-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+            align-items: center;
+            padding: 5rem 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .service-detail-section:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        .service-text, .service-image {
+            flex: 1;
+            min-width: 300px;
+        }
+        .service-image img {
+            border-radius: 0.5rem;
+            box-shadow: var(--shadow-lg);
+            width: 100%;
+        }
+        .service-list {
+            margin-top: 1.5rem;
+        }
+        .service-list li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .service-list i {
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-car-side"></i> Mahavir<span>Glass</span>
+            </a>
+            <div class="hamburger" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <nav>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container" data-aos="fade-up">
+            <h1>Our Services</h1>
+            <p>Comprehensive Automobile Glass Solutions</p>
+        </div>
+    </section>
+
+    <!-- Services Detail -->
+    <section class="container" style="padding-bottom: 5rem;">
+        
+        <!-- Service 1 -->
+        <div class="service-detail-section" id="windshield">
+            <div class="service-text" data-aos="fade-right">
+                <h2>Windshield Replacement</h2>
+                <p>We provide expert windshield replacement using OEM (Original Equipment Manufacturer) standard glass. A damaged windshield compromises structural integrity and driver visibility. Our trained technicians ensure a perfect fit with factory-approved adhesives.</p>
+                <ul class="service-list">
+                    <li><i class="fa-solid fa-check"></i> High-quality genuine glass</li>
+                    <li><i class="fa-solid fa-check"></i> 1-year warranty on workmanship</li>
+                    <li><i class="fa-solid fa-check"></i> Quick turnaround time (2-3 hours)</li>
+                    <li><i class="fa-solid fa-check"></i> Safe drive-away time guidelines followed</li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary" style="margin-top: 1.5rem;">Book Replacement</a>
+            </div>
+            <div class="service-image" data-aos="fade-left">
+                <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Windshield Replacement">
+            </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-detail-section" id="side-glass">
+            <div class="service-text" data-aos="fade-left">
+                <h2>Side Door Glass Replacement</h2>
+                <p>Broken side window? We can replace it quickly to secure your vehicle. Side door glasses are tempered to shatter into small, blunt pieces for safety. We carefully vacuum all debris from your vehicle's interior and door panel before installing the new glass.</p>
+                <ul class="service-list">
+                    <li><i class="fa-solid fa-check"></i> Complete debris cleanup</li>
+                    <li><i class="fa-solid fa-check"></i> Window regulator check</li>
+                    <li><i class="fa-solid fa-check"></i> Fast installation</li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary" style="margin-top: 1.5rem;">Get a Quote</a>
+            </div>
+            <div class="service-image" data-aos="fade-right">
+                <img src="https://images.unsplash.com/photo-1605810731003-82bfa89771ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Side Glass Replacement">
+            </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-detail-section" id="rear-glass">
+            <div class="service-text" data-aos="fade-right">
+                <h2>Rear Windshield Replacement</h2>
+                <p>Rear windshields require precise installation, especially when dealing with integrated defrosters and antennas. We ensure all connections are properly re-established and the glass is sealed flawlessly to prevent any water leaks.</p>
+                <ul class="service-list">
+                    <li><i class="fa-solid fa-check"></i> Defroster connection setup</li>
+                    <li><i class="fa-solid fa-check"></i> Leak-proof sealing</li>
+                    <li><i class="fa-solid fa-check"></i> Temperate glass safety</li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary" style="margin-top: 1.5rem;">Book Replacement</a>
+            </div>
+            <div class="service-image" data-aos="fade-left">
+                <img src="https://images.unsplash.com/photo-1555626906-fcf10d6851b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Rear Windshield Replacement">
+            </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-detail-section" id="repair">
+            <div class="service-text" data-aos="fade-left">
+                <h2>Glass Repair</h2>
+                <p>Not all damage requires a full replacement. Small chips or cracks (smaller than a coin) can often be repaired quickly. Our advanced resin injection technology restores the structural integrity of your windshield and prevents the crack from spreading.</p>
+                <ul class="service-list">
+                    <li><i class="fa-solid fa-check"></i> Cost-effective solution</li>
+                    <li><i class="fa-solid fa-check"></i> Takes only 30 minutes</li>
+                    <li><i class="fa-solid fa-check"></i> Restores strength and visibility</li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary" style="margin-top: 1.5rem;">Book Repair</a>
+            </div>
+            <div class="service-image" data-aos="fade-right">
+                <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Glass Repair">
+            </div>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="service-detail-section" id="insurance">
+            <div class="service-text" data-aos="fade-right">
+                <h2>Insurance Claim Support</h2>
+                <p>We work with all major insurance providers. Our team will assist you with the paperwork and processing to make your insurance claim as smooth and hassle-free as possible.</p>
+                <ul class="service-list">
+                    <li><i class="fa-solid fa-check"></i> Cashless facility available</li>
+                    <li><i class="fa-solid fa-check"></i> Direct billing to insurance companies</li>
+                    <li><i class="fa-solid fa-check"></i> Assistance with claim forms</li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary" style="margin-top: 1.5rem;">Learn More</a>
+            </div>
+            <div class="service-image" data-aos="fade-left">
+                <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Insurance Support">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo text-white" style="margin-bottom: 1rem; display: inline-flex;">
+                        <i class="fa-solid fa-car-side"></i> Mahavir<span class="text-accent">Glass</span>
+                    </a>
+                    <p class="text-light" style="margin-bottom: 1rem;">Premium automobile glass replacement and repair solutions. Your safety is our priority.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Information</h4>
+                    <ul class="text-light">
+                        <li><i class="fa-solid fa-location-dot" style="width: 20px;"></i> [Address Placeholder]</li>
+                        <li><i class="fa-solid fa-phone" style="width: 20px;"></i> +91 00000 00000</li>
+                        <li><i class="fa-solid fa-envelope" style="width: 20px;"></i> info@mahavirglass.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Mahavir Glass House. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Actions -->
+    <div class="floating-actions">
+        <a href="tel:+910000000000" class="float-btn call-btn">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+        <a href="https://wa.me/910000000000" target="_blank" class="float-btn whatsapp-btn">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

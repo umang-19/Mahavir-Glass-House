@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | Mahavir Glass House</title>
+    <meta name="description" content="Frequently asked questions about our automobile glass replacement and repair services.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        .page-header {
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1486496146582-9ffcd0b2a225?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            padding: 8rem 1.5rem 4rem;
+            text-align: center;
+            color: var(--bg-white);
+        }
+        .page-header h1 { color: var(--bg-white); font-size: 3rem; margin-bottom: 1rem; }
+
+        /* FAQ Accordion */
+        .faq-container {
+            max-width: 800px;
+            margin: 5rem auto;
+            padding: 0 1.5rem;
+        }
+        .faq-item {
+            background: var(--bg-white);
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        .faq-item:hover {
+            box-shadow: var(--shadow-md);
+        }
+        .faq-question {
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+        .faq-question:hover {
+            color: var(--accent-color);
+        }
+        .faq-question i {
+            color: var(--accent-color);
+            transition: transform 0.3s ease;
+        }
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        .faq-item.active .faq-question {
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: var(--bg-light);
+        }
+        .faq-answer p {
+            padding: 1.5rem;
+            color: var(--text-dark);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><i class="fa-solid fa-car-side"></i> Mahavir<span>Glass</span></a>
+            <div class="hamburger" id="hamburger"><i class="fa-solid fa-bars"></i></div>
+            <nav>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="faq.html" class="active">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container" data-aos="fade-up">
+            <h1>Frequently Asked Questions</h1>
+            <p>Find answers to common queries about our services.</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-container" data-aos="fade-up">
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                How long does windshield replacement take?
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>A standard windshield replacement usually takes about 1.5 to 2 hours. We also advise allowing the vehicle to sit for an additional 1 hour to let the urethane adhesive cure, ensuring safe drive-away conditions.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Do you provide insurance support?
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>Yes, we work with all major insurance companies and provide cashless claim processing facilities. Our team will assist you with all the necessary paperwork to make the process hassle-free.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Do you use genuine glass?
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>Absolutely. We only use OEM (Original Equipment Manufacturer) standard glass that meets all safety and quality regulations. Your safety is our top priority.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Which car brands do you support?
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>We provide glass solutions for all major car brands including Maruti Suzuki, Hyundai, Tata Motors, Mahindra, Honda, Toyota, Kia, MG, Volkswagen, Skoda, BMW, Mercedes-Benz, Audi, and more.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Do you offer emergency services?
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>Yes, we understand that a broken windshield can be an emergency. Please call our hotline number and we will arrange for a swift replacement or secure your vehicle as quickly as possible.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                What are your charges?
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <p>Pricing varies depending on your car model, year, and the specific piece of glass required (windshield, side glass, etc.). We offer highly competitive pricing and free quotes. Contact us with your vehicle details for an exact estimate.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-bottom" style="border-top: none;">
+                &copy; 2026 Mahavir Glass House. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all others
+                    faqItems.forEach(i => {
+                        i.classList.remove('active');
+                        i.querySelector('.faq-answer').style.maxHeight = null;
+                    });
+                    
+                    // If the clicked one wasn't active, open it
+                    if (!isActive) {
+                        item.classList.add('active');
+                        const answer = item.querySelector('.faq-answer');
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

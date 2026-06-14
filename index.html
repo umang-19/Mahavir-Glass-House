@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahavir Glass House | Car Windshield & Automobile Glass Specialists</title>
+    <meta name="description" content="Mahavir Glass House provides premium automobile glass replacement, windshield repair, rear windshield installation, side glass replacement, and complete automotive glass services.">
+    <meta name="keywords" content="automobile glass, car glass replacement, windshield repair, windshield replacement, car windshield Ahmedabad, automotive glass solutions, Mahavir Glass House">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* Home Specific Styles */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1555626906-fcf10d6851b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--bg-white);
+            padding: 0 1.5rem;
+            margin-top: 0;
+        }
+        .hero h1 {
+            color: var(--bg-white);
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-inline: auto;
+        }
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+        @media (max-width: 768px) {
+            .hero-btns {
+                flex-direction: column;
+            }
+        }
+
+        /* Features / Why Choose Us */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .feature-card {
+            background: var(--bg-white);
+            padding: 2.5rem 1.5rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border-bottom: 4px solid transparent;
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+            border-bottom: 4px solid var(--accent-color);
+        }
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+            transition: var(--transition);
+        }
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1);
+        }
+
+        /* Services Preview */
+        .services-preview { background-color: var(--bg-white); }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        .service-card {
+            border: 1px solid #e2e8f0;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        .service-card:hover {
+            box-shadow: var(--shadow-lg);
+        }
+        .service-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .service-content {
+            padding: 1.5rem;
+        }
+        .service-content h3 { font-size: 1.25rem; }
+
+        /* Brands Grid */
+        .brands-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 2rem;
+            align-items: center;
+            justify-items: center;
+            margin-top: 3rem;
+        }
+        .brand-item {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-light);
+            text-transform: uppercase;
+            transition: var(--transition);
+            text-align: center;
+        }
+        .brand-item:hover {
+            color: var(--accent-color);
+            transform: scale(1.05);
+        }
+
+        /* Process Steps */
+        .process-section { background-color: var(--bg-white); }
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+        .process-step {
+            position: relative;
+        }
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary-color);
+            color: var(--bg-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Testimonials */
+        .testimonial-card {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 3rem;
+        }
+        .stars { color: #FBBF24; margin-bottom: 1rem; }
+        .client-info { margin-top: 1.5rem; font-weight: 600; }
+
+        /* CTA */
+        .cta-section {
+            background-color: var(--accent-color);
+            color: var(--bg-white);
+            text-align: center;
+        }
+        .cta-section h2 { color: var(--bg-white); }
+        .cta-btns {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-car-side"></i> Mahavir<span>Glass</span>
+            </a>
+            <div class="hamburger" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <nav>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container" data-aos="fade-up">
+            <h1 data-aos="fade-down" data-aos-delay="100">Premium Automobile Glass Solutions for Every Car</h1>
+            <p data-aos="fade-up" data-aos-delay="200">We provide windshield replacement, car glass repair, side glass replacement, rear windshield installation, and complete automobile glass solutions.</p>
+            <div class="hero-btns" data-aos="zoom-in" data-aos-delay="300">
+                <a href="contact.html" class="btn btn-primary">Get Free Quote</a>
+                <a href="tel:+910000000000" class="btn btn-secondary"><i class="fa-solid fa-phone"></i> Call Now</a>
+                <a href="https://wa.me/910000000000?text=Hello%20Mahavir%20Glass%20House,%20I%20need%20a%20quote%20for%20automobile%20glass%20replacement." target="_blank" class="btn btn-outline"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section-padding" id="why-choose-us">
+        <div class="container">
+            <h2 class="text-center" data-aos="fade-up">Why Choose Us</h2>
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fa-solid fa-gem feature-icon"></i>
+                    <h3>Premium Quality Glass</h3>
+                    <p>We source only the highest quality, genuine glass to ensure safety and durability for your vehicle.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-solid fa-user-gear feature-icon"></i>
+                    <h3>Expert Technicians</h3>
+                    <p>Our team consists of highly trained professionals with years of experience in automotive glass.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fa-solid fa-tags feature-icon"></i>
+                    <h3>Affordable Pricing</h3>
+                    <p>We provide top-notch services at competitive prices, ensuring value for your money.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fa-solid fa-stopwatch feature-icon"></i>
+                    <h3>Fast Installation</h3>
+                    <p>We understand your time is valuable. Our quick turnaround ensures you're back on the road safely.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <i class="fa-solid fa-certificate feature-icon"></i>
+                    <h3>Genuine Products</h3>
+                    <p>All our products are authentic and meet the highest industry safety standards.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+                    <i class="fa-solid fa-face-smile feature-icon"></i>
+                    <h3>Customer Satisfaction</h3>
+                    <p>We prioritize your satisfaction with professional service and reliable after-sales support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="section-padding services-preview">
+        <div class="container">
+            <h2 class="text-center" data-aos="fade-up">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1605814524867-a7ea7a67f607?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Windshield Replacement" class="service-img">
+                    <div class="service-content">
+                        <h3><i class="fa-solid fa-shield-halved text-accent"></i> Windshield Replacement</h3>
+                        <p>Complete replacement of cracked or shattered front windshields using OEM standard glass.</p>
+                        <a href="services.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Learn More</a>
+                    </div>
+                </div>
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Side Door Glass" class="service-img">
+                    <div class="service-content">
+                        <h3><i class="fa-solid fa-door-open text-accent"></i> Side Door Glass</h3>
+                        <p>Quick and precise replacement of damaged side window glass for all car models.</p>
+                        <a href="services.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Learn More</a>
+                    </div>
+                </div>
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Glass Repair" class="service-img">
+                    <div class="service-content">
+                        <h3><i class="fa-solid fa-wrench text-accent"></i> Glass Repair</h3>
+                        <p>Professional repair for minor chips and cracks to prevent further damage to your glass.</p>
+                        <a href="services.html" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Learn More</a>
+                    </div>
+                </div>
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="service-content" style="height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: var(--bg-light);">
+                        <h3>More Services</h3>
+                        <p>Rear Windshield, Quarter Glass, Insurance Assistance & More.</p>
+                        <a href="services.html" class="btn btn-outline" style="color: var(--primary-color); border-color: var(--primary-color); margin-top: 1rem;">View All Services</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands We Serve -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="text-center" data-aos="fade-up">Car Brands We Serve</h2>
+            <div class="brands-grid" data-aos="fade-up">
+                <div class="brand-item">Maruti Suzuki</div>
+                <div class="brand-item">Hyundai</div>
+                <div class="brand-item">Tata Motors</div>
+                <div class="brand-item">Mahindra</div>
+                <div class="brand-item">Honda</div>
+                <div class="brand-item">Toyota</div>
+                <div class="brand-item">Kia</div>
+                <div class="brand-item">MG</div>
+                <div class="brand-item">Volkswagen</div>
+                <div class="brand-item">Skoda</div>
+                <div class="brand-item">BMW</div>
+                <div class="brand-item">Mercedes-Benz</div>
+                <div class="brand-item">Audi</div>
+                <div class="brand-item">Nissan</div>
+                <div class="brand-item">Renault</div>
+                <div class="brand-item">Ford</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section-padding process-section">
+        <div class="container">
+            <h2 class="text-center" data-aos="fade-up">Our Process</h2>
+            <div class="process-grid" data-aos="fade-up" data-aos-delay="200">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h4>Contact Us</h4>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h4>Inspection</h4>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h4>Glass Selection</h4>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h4>Installation</h4>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <h4>Quality Check</h4>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">6</div>
+                    <h4>Delivery</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="text-center" data-aos="fade-up">What Our Customers Say</h2>
+            <div class="swiper testimonials-slider" data-aos="fade-up">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p>"Excellent service! Replaced my i20's windshield in no time. Very professional staff and affordable pricing."</p>
+                            <div class="client-info">Rahul Sharma<br><span class="text-light">Hyundai i20</span></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p>"Genuine glass and fast installation. They also helped me with the insurance claim. Highly recommended!"</p>
+                            <div class="client-info">Amit Patel<br><span class="text-light">Maruti Swift</span></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+                            <p>"Got my side window replaced here. The quality of work is premium and the turnaround time was surprisingly quick."</p>
+                            <div class="client-info">Sanjay Desai<br><span class="text-light">Honda City</span></div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p>"Mahavir Glass House is the best in town. Fixed my Audi's rear glass perfectly. Great attention to detail."</p>
+                            <div class="client-info">Vikram Singh<br><span class="text-light">Audi A4</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-padding cta-section">
+        <div class="container" data-aos="zoom-in">
+            <h2>Need Car Glass Replacement Today?</h2>
+            <p>Get in touch with us for a quick quote and expert service.</p>
+            <div class="cta-btns">
+                <a href="tel:+910000000000" class="btn btn-outline"><i class="fa-solid fa-phone"></i> Call Now</a>
+                <a href="https://wa.me/910000000000" class="btn btn-secondary" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                <a href="contact.html" class="btn btn-outline">Get Free Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo text-white" style="margin-bottom: 1rem; display: inline-flex;">
+                        <i class="fa-solid fa-car-side"></i> Mahavir<span class="text-accent">Glass</span>
+                    </a>
+                    <p class="text-light" style="margin-bottom: 1rem;">Premium automobile glass replacement and repair solutions. Your safety is our priority.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Windshield Replacement</a></li>
+                        <li><a href="services.html">Door Glass Replacement</a></li>
+                        <li><a href="services.html">Rear Windshield</a></li>
+                        <li><a href="services.html">Glass Repair</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Information</h4>
+                    <ul class="text-light">
+                        <li><i class="fa-solid fa-location-dot" style="width: 20px;"></i> [Address Placeholder, Ahmedabad]</li>
+                        <li><i class="fa-solid fa-phone" style="width: 20px;"></i> +91 00000 00000</li>
+                        <li><i class="fa-solid fa-envelope" style="width: 20px;"></i> info@mahavirglass.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Mahavir Glass House. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Actions -->
+    <div class="floating-actions">
+        <a href="tel:+910000000000" class="float-btn call-btn">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+        <a href="https://wa.me/910000000000?text=Hello%20Mahavir%20Glass%20House,%20I%20need%20a%20quote%20for%20automobile%20glass%20replacement." target="_blank" class="float-btn whatsapp-btn">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
