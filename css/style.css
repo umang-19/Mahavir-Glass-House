@@ -225,6 +225,10 @@ header.scrolled {
   background-color: #25D366;
 }
 
+.map-btn {
+  background-color: #EA4335;
+}
+
 .call-btn {
   background-color: var(--primary-color);
   display: none; /* Mobile only */
