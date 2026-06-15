@@ -315,10 +315,32 @@ footer .logo {
     gap: 2rem;
     transition: var(--transition);
     box-shadow: var(--shadow-lg);
+    z-index: 1001;
   }
   
   .nav-links.active {
     left: 0;
+  }
+
+  /* Global mobile adjustments */
+  .page-header {
+    padding: 6rem 1rem 3rem !important;
+  }
+
+  .features-grid, .services-grid, .gallery-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .about-content, .contact-section, .service-detail-section {
+    gap: 2rem !important;
+  }
+
+  .about-text, .about-image, .service-text, .service-image, .contact-info, .contact-form-container {
+    min-width: 100% !important;
+  }
+
+  .contact-form {
+    padding: 1.5rem !important;
   }
 
   .call-btn {
@@ -328,4 +350,17 @@ footer .logo {
     bottom: 1.5rem;
     right: 1.5rem;
   }
+  
+  .logo i {
+    display: inline-block;
+    animation: runningCar 0.8s infinite linear;
+  }
+}
+
+@keyframes runningCar {
+  0% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-2px) rotate(-3deg); }
+  50% { transform: translateY(0px) rotate(0deg); }
+  75% { transform: translateY(-1px) rotate(2deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
 }
