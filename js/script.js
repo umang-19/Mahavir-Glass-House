@@ -90,4 +90,32 @@ document.addEventListener('DOMContentLoaded', () => {
             link.classList.add('active');
         }
     });
+
+    // FAQ Accordion functionality
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        if (question) {
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                
+                // Close all others
+                faqItems.forEach(i => {
+                    i.classList.remove('active');
+                    if(i.querySelector('.faq-answer')) {
+                        i.querySelector('.faq-answer').style.maxHeight = null;
+                    }
+                });
+                
+                // If the clicked one wasn't active, open it
+                if (!isActive) {
+                    item.classList.add('active');
+                    const answer = item.querySelector('.faq-answer');
+                    if(answer) {
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                    }
+                }
+            });
+        }
+    });
 });

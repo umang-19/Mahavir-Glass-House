@@ -135,16 +135,31 @@
             margin-top: 3rem;
         }
         .brand-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-size: 1.25rem;
             font-weight: 700;
             color: var(--text-light);
             text-transform: uppercase;
-            transition: var(--transition);
             text-align: center;
+            transition: var(--transition);
+        }
+        .brand-logo {
+            max-height: 60px;
+            max-width: 100px;
+            object-fit: contain;
+            filter: grayscale(100%);
+            opacity: 0.6;
+            transition: var(--transition);
+        }
+        .brand-item:hover .brand-logo {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.1);
         }
         .brand-item:hover {
             color: var(--accent-color);
-            transform: scale(1.05);
         }
 
         /* Process Steps */
@@ -217,7 +232,7 @@
                     <li><a href="services.html">Services</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="#faq">FAQ</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -339,22 +354,22 @@
         <div class="container">
             <h2 class="text-center" data-aos="fade-up">Car Brands We Serve</h2>
             <div class="brands-grid" data-aos="fade-up">
-                <div class="brand-item">Maruti Suzuki</div>
-                <div class="brand-item">Hyundai</div>
-                <div class="brand-item">Tata Motors</div>
-                <div class="brand-item">Mahindra</div>
-                <div class="brand-item">Honda</div>
-                <div class="brand-item">Toyota</div>
-                <div class="brand-item">Kia</div>
-                <div class="brand-item">MG</div>
-                <div class="brand-item">Volkswagen</div>
-                <div class="brand-item">Skoda</div>
-                <div class="brand-item">BMW</div>
-                <div class="brand-item">Mercedes-Benz</div>
-                <div class="brand-item">Audi</div>
-                <div class="brand-item">Nissan</div>
-                <div class="brand-item">Renault</div>
-                <div class="brand-item">Ford</div>
+                <div class="brand-item"><img src="https://logo.clearbit.com/marutisuzuki.com" alt="Maruti Suzuki" class="brand-logo" onerror="this.outerHTML='Maruti Suzuki'"></div>
+                <div class="brand-item"><img src="https://logo.clearbit.com/hyundai.com" alt="Hyundai" class="brand-logo" onerror="this.outerHTML='Hyundai'"></div>
+                <div class="brand-item"><img src="https://logo.clearbit.com/tatamotors.com" alt="Tata Motors" class="brand-logo" onerror="this.outerHTML='Tata Motors'"></div>
+                <div class="brand-item"><img src="https://logo.clearbit.com/mahindra.com" alt="Mahindra" class="brand-logo" onerror="this.outerHTML='Mahindra'"></div>
+                <div class="brand-item"><img src="https://logo.clearbit.com/honda.com" alt="Honda" class="brand-logo" onerror="this.outerHTML='Honda'"></div>
+                <div class="brand-item"><img src="https://logo.clearbit.com/toyota.com" alt="Toyota" class="brand-logo" onerror="this.outerHTML='Toyota'"></div>
+                <div class="brand-item"><img src="https://logo.clearbit.com/kia.com" alt="Kia" class="brand-logo" onerror="this.outerHTML='Kia'"></div>
+                <div class="brand-item"><img src="https://logo.clearbit.com/mgmotor.co.in" alt="MG" class="brand-logo" onerror="this.outerHTML='MG'"></div>
+                <div class="brand-item"><img src="https://logo.clearbit.com/vw.com" alt="Volkswagen" class="brand-logo" onerror="this.outerHTML='Volkswagen'"></div>
+                <div class="brand-item"><img src="https://logo.clearbit.com/skoda-auto.com" alt="Skoda" class="brand-logo" onerror="this.outerHTML='Skoda'"></div>
+                <div class="brand-item"><img src="https://logo.clearbit.com/bmw.com" alt="BMW" class="brand-logo" onerror="this.outerHTML='BMW'"></div>
+                <div class="brand-item"><img src="https://logo.clearbit.com/mercedes-benz.com" alt="Mercedes-Benz" class="brand-logo" onerror="this.outerHTML='Mercedes-Benz'"></div>
+                <div class="brand-item"><img src="https://logo.clearbit.com/audi.com" alt="Audi" class="brand-logo" onerror="this.outerHTML='Audi'"></div>
+                <div class="brand-item"><img src="https://logo.clearbit.com/nissan-global.com" alt="Nissan" class="brand-logo" onerror="this.outerHTML='Nissan'"></div>
+                <div class="brand-item"><img src="https://logo.clearbit.com/renault.com" alt="Renault" class="brand-logo" onerror="this.outerHTML='Renault'"></div>
+                <div class="brand-item"><img src="https://logo.clearbit.com/ford.com" alt="Ford" class="brand-logo" onerror="this.outerHTML='Ford'"></div>
             </div>
         </div>
     </section>
@@ -428,6 +443,63 @@
                     </div>
                 </div>
                 <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas SEO Section -->
+    <section class="section-padding" style="background-color: var(--bg-white);">
+        <div class="container text-center" data-aos="fade-up">
+            <h2 style="margin-bottom: 1rem;">Serving North Gujarat with Trusted Car Glass Solutions</h2>
+            <p style="max-width: 900px; margin: 0 auto; color: var(--text-dark); font-size: 1.1rem; line-height: 1.8;">
+                Mahavir Glass House proudly provides windshield replacement, side door glass replacement, back glass replacement, and car glass repair services across North Gujarat. We serve customers in <strong>Mehsana, Patan, Palanpur, Unjha, Visnagar, Siddhpur, Himmatnagar, Deesa, Kadi, Vijapur</strong>, and nearby areas with reliable and professional auto glass solutions.
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section-padding" style="background-color: var(--bg-light);" data-aos="fade-up">
+        <div class="container faq-container">
+            <h2 class="text-center" style="margin-bottom: 3rem;">Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    How much does windshield replacement cost in Mehsana?
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>The cost depends on the vehicle model and glass type. Contact Mahavir Glass House for a customized quote.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Can a cracked windshield be repaired?
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Small chips may be repairable, but larger cracks often require a complete windshield replacement.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Do you replace side door glass?
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we provide professional side door glass replacement for a wide range of vehicle models.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    How long does windshield replacement take?
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Most installations are completed within a few hours, depending on the vehicle and glass availability.</p>
+                </div>
             </div>
         </div>
     </section>

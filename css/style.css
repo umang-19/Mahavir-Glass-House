@@ -65,7 +65,7 @@ h3 { font-size: 1.75rem; margin-bottom: 1rem; }
 .text-white { color: var(--bg-white); }
 .text-light { color: var(--text-light); }
 
-.section-padding { padding: 5rem 0; }
+.section-padding { padding: 3rem 0; }
 .container {
   width: 100%;
   max-width: 1200px;
@@ -586,4 +586,55 @@ footer .logo {
 @keyframes roadMove {
   0% { background-position: 0 0; }
   100% { background-position: -12px 0; }
+}
+
+/* FAQ Accordion */
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.faq-item {
+    background: var(--bg-white);
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    transition: var(--transition);
+}
+.faq-item:hover {
+    box-shadow: var(--shadow-md);
+}
+.faq-question {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+.faq-question:hover {
+    color: var(--accent-color);
+}
+.faq-question i {
+    color: var(--accent-color);
+    transition: transform 0.3s ease;
+}
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+.faq-item.active .faq-question {
+    border-bottom: 1px solid #e2e8f0;
+}
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: var(--bg-light);
+}
+.faq-answer p {
+    padding: 1.5rem;
+    color: var(--text-dark);
 }
